@@ -31,5 +31,6 @@ module.exports = function (app) {
         res.json(alphaMatch);
 
         friendsGroup.push(req.body);
+        console.log('this is the best match: ' + alphaMatch);
     });
 };
