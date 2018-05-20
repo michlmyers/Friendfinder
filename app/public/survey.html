@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Friendfinder Survey</title>
 </head>
 
@@ -135,11 +136,60 @@
 
     <div>
         <p>
-            <a href="">API Friends List</a>
-            <a href="">Github Repo</a>
+            <a href="/api/friends">API Friends List</a>
+            <a href="https://github.com/michlmyers/Friendfinder">Github Repo</a>
         </p>
     </div>
-    
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#subBtn').on('click', function () {
+                function valForm() {
+                    var isVal = true;
+                    $('.validate').each(function () {
+                        if ($(this).val() === '') {
+                            isVal = false;
+                        }
+                    });
+
+                    $('.browser-default').each(function () {
+                        if ($(this).val() === '') {
+                            isVal = false;
+                        }
+                    });
+                    return isVal;
+                }
+
+                if (valForm() == true) {
+                    var newFriend = {
+                        name: $('#name').val().trim(),
+                        profilePic: $('#image').val().trim(),
+                        answers: [
+                            $('#q1').val(),
+                            $('#q2').val(),
+                            $('#q3').val(),
+                            $('#q4').val(),
+                            $('#q5').val(),
+                            $('#q6').val(),
+                            $('#q7').val(),
+                            $('#q8').val(),
+                            $('#q9').val(),
+                            $('#q10').val(),
+                        ]
+                    };
+
+                    var currentURL = window.location.origin;
+
+                    $.post(currentURL + '/api/friends', newFriend, function (data) {
+                        $('').text(data.name);
+                        $('').attr('src', data.profilePic);
+                    })
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
