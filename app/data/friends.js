@@ -30,6 +30,22 @@ var friendsGroup = [
             '4',
             '5'
         ]
+    },
+    {
+        name: 'Gizmo',
+        profilePic: 'https://rottenink.files.wordpress.com/2016/05/gizmo-2.jpg',
+        answers: [
+            '4',
+            '5',
+            '5',
+            '4',
+            '4',
+            '5',
+            '3',
+            '3',
+            '4',
+            '5',
+        ]
     }
 ]
 

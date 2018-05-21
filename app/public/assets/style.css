@@ -10,7 +10,24 @@
     line-height: 2.5;
 }
 
+.head2 {
+    margin-left: 10%;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: black;
+    background-color: pink;
+    border: solid 1px red;
+    text-align: center;
+    padding: 20px 10px;
+    width: 80%;
+    line-height: 2.5;
+}
+
 .head img {
+    height: 50px;
+    width: 50px;
+}
+
+.head2 img {
     height: 50px;
     width: 50px;
 }
@@ -24,6 +41,18 @@
     color: yellowgreen;
     text-decoration: underline;
     background-color: black;
+}
+
+.questions {
+    margin-left: 10%;
+    font-family: 'Loved by the King', cursive;
+    color: pink;
+    background-color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 10px;
+    width: 80%;
+    line-height: 2.5;
 }
 
 .routes {
@@ -45,4 +74,47 @@ a:hover {
     background-color: black;
     color: pink;
     padding: 5px;
+}
+
+.modal {
+    display: none;
+} 
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#alphaPic {
+    height: 300px;
+    width: 300px;
+}
+
+#modalPop {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover, 
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
